@@ -1,10 +1,14 @@
-import { CardData, defaultCardData } from "../data/card-data";
+import { CardDataType } from "../data/card-data";
 
+type ItemCardListProps = {
+  cardData: CardDataType[];
+  defaultCardData: CardDataType[];
+}
 
-const ItemCardList = ({ items }: { items: CardData[] }) => {
+const ItemCardList: React.FC<ItemCardListProps> = ({ cardData, defaultCardData }) => {
   return (
     <div className="item-card-list">
-      {items.map((item, index) => (
+      {cardData.map((item, index) => (
         <div className="card" key={index}>
           <div className="image">
             <img src={item.imageUrl || defaultCardData[0].imageUrl} alt={item.title || defaultCardData[0].title} />

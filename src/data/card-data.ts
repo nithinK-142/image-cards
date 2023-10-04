@@ -1,12 +1,21 @@
-export type CardData = {
+const description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias non odio natus maxime fugiat? Debitis consectetur incidunt corrupti quos labore."
+
+export type CardDataType = {
   title: string;
   imageUrl: string;
   description: string;
 }
 
-const description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias non odio natus maxime fugiat? Debitis consectetur incidunt corrupti quos labore."
+export const defaultCardData: CardDataType[] = [
+  {
+    title: "Image not found!!!",
+    imageUrl:
+      "https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400006/100130939-error-404-page-not-found-error-with-glitch-effect-on-screen-vector-illustration-for-your-design.jpg",
+    description: `${description}`,
+  }
+]
 
-export const cardData: CardData[] = [
+export const cardData: CardDataType[] = [
   {
     title: "Dog 1",
     imageUrl:
@@ -68,13 +77,3 @@ export const cardData: CardData[] = [
     description: `${description}`,
   },
 ];
-
-
-export const defaultCardData = [
-  {
-    title: "Image not found!!!",
-    imageUrl:
-      "https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400006/100130939-error-404-page-not-found-error-with-glitch-effect-on-screen-vector-illustration-for-your-design.jpg",
-    description: `${description}`,
-  }
-]

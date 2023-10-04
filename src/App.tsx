@@ -1,11 +1,11 @@
-import { cardData } from "./data/card-data";
+import { cardData,  defaultCardData } from "./data/card-data";
 import ItemCardList from "./components/ItemCardList";
 
 function App() {
   return (
     <div className="app">
       <h1>Dog Cards</h1>
-      <ItemCardList items={cardData} />
+      <ItemCardList cardData={cardData} defaultCardData={defaultCardData} />
     </div>
   );
 }
